@@ -149,7 +149,9 @@ if __name__ == "__main__":
     jobinja_login()
 
     urls = extract_urls_from_xpath(init_url)
-    for i in range(1):
+
+    pages_to_scan = 3
+    for i in range(pages_to_scan):
         init_url = increment_page(init_url)
         urls.extend(extract_urls_from_xpath(init_url))
 
